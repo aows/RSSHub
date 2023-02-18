@@ -206,6 +206,9 @@
     "/acs/journal/:id": [
         "nczitzk"
     ],
+    "/aeaweb/:id": [
+        "nczitzk"
+    ],
     "/agefans/detail/:id": [
         "s2marine"
     ],
@@ -285,6 +288,9 @@
         "Rongronggg9"
     ],
     "/android/platform-tools-releases": [
+        "nczitzk"
+    ],
+    "/annualreviews/:id": [
         "nczitzk"
     ],
     "/anquanke/:category/:fulltext?": [
@@ -1059,6 +1065,18 @@
     ],
     "/dcard/:section/:type?": [
         "HenryQW"
+    ],
+    "/dcfever/news/:type?": [
+        "TonyRL"
+    ],
+    "/dcfever/reviews/:type?": [
+        "TonyRL"
+    ],
+    "/dcfever/trading/search/:keyword/:mainCat?": [
+        "TonyRL"
+    ],
+    "/dcfever/trading/:id": [
+        "TonyRL"
     ],
     "/ddosi/": [
         "XinRoom"
