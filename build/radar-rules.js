@@ -4643,7 +4643,7 @@
     jwzx:[ { title:"教务处",
         docs:"https://docs.rsshub.app/university.html#ha-er-bin-li-gong-da-xue",
         source:"/homepage/*",
-        target:(params, url) => `/hrbust/jwzx/${url.match(/(?<=columnId=)\d+/)}` } ] },
+        target:(params, url) => `/hrbust/jwzx/${new URL(url).searchParams.get('columnId')}` } ] },
   "huangz.me":{ _name:"黄健宏博客",
     blog:[ { title:"文章",
         docs:"https://docs.rsshub.app/blog.html#huang-jian-hong-bo-ke",
@@ -4908,6 +4908,15 @@
         source:[ "/journal/msom",
           "/toc/msom/0/0" ],
         target:"/informs/msom" } ] },
+  "inoreader.com":{ _name:"Inoreader",
+    ".":[ { title:"HTML Clip",
+        docs:"https://docs.rsshub.app/reading.html#inoreader",
+        source:[ "/stream/user/:user/tag/:tag/*" ],
+        target:(params, url) => {
+                    const origin = new URL(url);
+                    const limit = origin.searchParams.get('n');
+                    return `/inoreader/html_clip/${params.user}/${params.tag}` + (limit ? `?limit=${limit}` : '');
+                } } ] },
   "iq.com":{ _name:"爱奇艺",
     ".":[ { title:"剧集",
         docs:"https://docs.rsshub.app/multimedia.html#ai-qi-yi",
